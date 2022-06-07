@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>VGG - Guesser</title>
+      <meta name="viewport" content="user-scalable=no">
+      <link rel="stylesheet" href="css/index.css">
+      <script src="js/vggdata.js"></script>
+      <script src="js/index.js"></script>
+    </head> 
+    <body>
+      <div class="content" id="startPage">
+        <h1 class="headline">VGG - Guesser</h1>
+        <button class="fancybutton" onclick="startGame('RANDOM')">YOLO Mode</button> 
+        <button class="fancybutton disabledBtn" onclick="startGame('SPAT')" disabled>Streckenplanungen AT</button>
+        <button class="fancybutton disabledBtn" onclick="startGame('SPEU')" disabled>Streckenplanungen EU</button>
+        <button class="fancybutton" onclick="startGame('CAR')">Autobahnen </button>
+        <button class="fancybutton" onclick="startGame('S&B')">Schnell-& Bundestraßen</button>
+        <button class="fancybutton" onclick="startGame('TRAIN')">Bahnstrecken</button>
+      </div>
+      <div class="content" id="game" style="display:none">
+        <h2 id="gameHeadline">x</h1>
+        <textarea id="userEntry" spellcheck="false" rows="10%"></textarea>
+        <p id="route"></p>
+        <button id="checkButton" class="fancybutton" onclick="checkUserInput()">Überprüfen</button>
+        <button id="againButton" class="fancybutton" onclick="restartGame()" style="display:none">Nochmal ?</button>
+      </div>
+    </body>
+    <footer>
+      <p onclick="location.reload()">Home</p>
+    </footer>
+</html>
