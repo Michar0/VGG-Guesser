@@ -64,4 +64,10 @@ var data = {
         {"name": "Welser Autobahn (A25)", "locationsInOrder":["Knoten Haid","Knoten Wels"]},
         {"name": "Linzer Autobahn (A26)", "locationsInOrder":["Knoten Hummelhof","Knoten Urfahr"]}
     ],
+    "seaLines":[
+        {"name": "Rhein-Main-Donau-Wasserstraße", "locationsInOrder":["Rotterdam","Duisburg","Düsseldorf","Köln","Bonn","Mainz","Frankfurt","Würzburg","Bamberg","Nürnberg","Kelheim","Regensburg","Passau","Linz","Enns","Krems","Wien","Bratislava","Budapest","Vukovar","Novi Sad","Belgrad","Ruse","Cernadova","Braila","Galati","Tulcea"]},
+        {"name": "Main-Donau-Kanal", "locationsInOrder":["Bamberg","Nürnberg","Kelheim"]},
+        {"name": "Nord-Ostsee-Kanal", "locationsInOrder":["Brunsbüttel","Kiel"]},
+        {"name": "Mittellandkanal", "locationsInOrder":["Rheine(Ems)","Minden","Hannover","Braunschweig","Wolfsburg","Magdeburg"]},
+    ],
 }

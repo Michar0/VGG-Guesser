@@ -8,48 +8,54 @@ function startGame(game){
         mode="TRAIN";
         var length = data.trainLines.length;
         selectedRoute = data.trainLines[getRndInteger(0,length)];
-        document.getElementById("gameHeadline").innerText=selectedRoute.name;
         break;
 
         case('S&B'):
         mode="S&B";
         var length = data.sbStreets.length;
         selectedRoute = data.sbStreets[getRndInteger(0,length)];
-        document.getElementById("gameHeadline").innerText=selectedRoute.name;
         break;
 
         case('CAR'):
         mode="CAR";
         var length = data.autoLines.length;
         selectedRoute = data.autoLines[getRndInteger(0,length)];
-        document.getElementById("gameHeadline").innerText=selectedRoute.name;
+        break;
+
+        case('SEA'):
+        mode="SEA";
+        var length = data.seaLines.length;
+        selectedRoute = data.seaLines[getRndInteger(0,length)];
         break;
 
         case('RANDOM'):
         mode = "RANDOM";
-        var randomModes = ["TRAIN","S&B","CAR"];
+        var randomModes = ["TRAIN","S&B","CAR","SEA"];
         var randomMode = randomModes[getRndInteger(0,randomModes.length)];
 
         switch(randomMode){
             case('TRAIN'):
             var length = data.trainLines.length;
             selectedRoute = data.trainLines[getRndInteger(0,length)];
-            document.getElementById("gameHeadline").innerText=selectedRoute.name;
             break;
 
             case('S&B'):
             var length = data.sbStreets.length;
             selectedRoute = data.sbStreets[getRndInteger(0,length)];
-            document.getElementById("gameHeadline").innerText=selectedRoute.name;
             break;
 
             case('CAR'):
             var length = data.autoLines.length;
             selectedRoute = data.autoLines[getRndInteger(0,length)];
-            document.getElementById("gameHeadline").innerText=selectedRoute.name;
+            break;
+
+            case('SEA'):
+            var length = data.seaLines.length;
+            selectedRoute = data.seaLines[getRndInteger(0,length)];
             break;
         }
     }
+    document.getElementById("gameHeadline").innerText=selectedRoute.name;
     document.getElementById("game").style.display="block";
 };
 
@@ -121,9 +127,10 @@ function checkUserInput(){
     }
     else
     {
-        document.getElementById("gameHeadline").style.color="green"; 
+        document.getElementById("gameHeadline").style.color="green";
     }
     document.getElementById("userEntry").disabled=true;
     document.getElementById("checkButton").style.display='none';
     document.getElementById("againButton").style.display='block';
 }
+
