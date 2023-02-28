@@ -8,7 +8,7 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-color: blue;
+    background-color: rgb(100, 155, 0);
     font-family: 'bahnschrift';
     display:flex;
     flex-direction: column;
@@ -27,7 +27,7 @@ footer {
     text-align: center;
     font-weight: bolder;
     font-family: 'bahnschrift';
-    font-size: 200%;
+    font-size: 150%;
 }
 
 .headline{
@@ -65,7 +65,7 @@ footer {
     text-align: center;
     font-family: 'bahnschrift';
     color:white;
-    font-size: 500%;
+    font-size: 350%;
 }
 
 #userEntry {
@@ -85,4 +85,15 @@ footer {
     font-family: 'bahnschrift';
     text-align: center;
     font-size: 200%;
+}
+
+#notice{
+    text-align: center;
+    font-family: 'bahnschrift';
+    color:white;
+    font-size: 150%; 
+}
+
+#homeButton{
+    cursor: pointer;
 }

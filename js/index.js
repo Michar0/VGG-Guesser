@@ -1,5 +1,11 @@
 var selectedRoute;
 var mode="";
+var greenColorValue=127;
+var redColorValue=127;
+var blueColorValue=0;
+
+
+
 
 function startGame(game){
     document.getElementById("startPage").style.display="none";
@@ -22,6 +28,13 @@ function startGame(game){
         mode="CAR";
         var length = data.autoLines.length;
         selectedRoute = data.autoLines[getRndInteger(0,length)];
+        document.getElementById("gameHeadline").innerText=selectedRoute.name;
+        break;
+
+        case('SPL'):
+        mode="SPL";
+        var length = data.splQuestions.length;
+        selectedRoute = data.splQuestions[getRndInteger(0,length)];
         document.getElementById("gameHeadline").innerText=selectedRoute.name;
         break;
 
@@ -51,14 +64,14 @@ function startGame(game){
         }
     }
     document.getElementById("game").style.display="block";
+
 };
 
 function restartGame(){
-    document.getElementById("route").style.display='none';
-    document.getElementById("route").innerText="";
+    document.body.style.background = 'rgb(' + redColorValue + ',' + greenColorValue + ',' + blueColorValue+')';
+    document.getElementById("notice").innerText="Komma setzen als Trenner zwischen zwei Antworten/Knotenpunkten";
     document.getElementById("checkButton").style.display='block';
     document.getElementById("againButton").style.display='none'
-    document.getElementById("gameHeadline").style.color="white"; 
     document.getElementById("userEntry").value="";
     document.getElementById("userEntry").disabled=false;
     startGame(mode);
@@ -103,7 +116,10 @@ function checkUserInput(){
     }
     if(userInputCorrect == false)
     {
-        document.getElementById("gameHeadline").style.color="red";
+        document.body.style.background = "red"; 
+        redColorValue=redColorValue+10;
+        greenColorValue=greenColorValue-10;
+
         var rightroute="";
         for(var i=0;i<selectedRoute.locationsInOrder.length;i++)
         {
@@ -116,12 +132,24 @@ function checkUserInput(){
                 rightroute = rightroute + selectedRoute.locationsInOrder[i]+" - ";
             }
         }
-        document.getElementById("route").innerText=rightroute;
-        document.getElementById("route").style.display='block';
+        document.getElementById("notice").innerText="Lösung: "+rightroute;
     }
     else
     {
-        document.getElementById("gameHeadline").style.color="green"; 
+        document.body.style.background = "green"; 
+        redColorValue=redColorValue-10;
+        greenColorValue=greenColorValue+10;
+
+    }
+    if(greenColorValue>255)
+    {
+        greenColorValue = 255;
+        redColorValue = 0;
+    }
+    if(redColorValue>255)
+    {
+        redColorValue = 255;
+        greenColorValue = 0;
     }
     document.getElementById("userEntry").disabled=true;
     document.getElementById("checkButton").style.display='none';
