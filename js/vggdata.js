@@ -92,4 +92,10 @@ var data = {
         {"name": "Reklamationsfrist bei geheimen Mängeln bei Beweglichen/unbeweglichen Sachen", "locationsInOrder":["2 Jahre","3 Jahre"]},
         {"name": "Ablauf eines außergerichtlichen Mahnverfahrens in Schritten ?", "locationsInOrder":["Erinnerungsschreiben","2te Mahnung","3te Mahnung","Post- bzw. Inkassoauftrag","Rechtsanwalt"]},
     ],
+    "seaLines":[
+        {"name": "Rhein-Main-Donau-Wasserstraße", "locationsInOrder":["Rotterdam","Duisburg","Düsseldorf","Köln","Bonn","Mainz","Frankfurt","Würzburg","Bamberg","Nürnberg","Kelheim","Regensburg","Passau","Linz","Enns","Krems","Wien","Bratislava","Budapest","Vukovar","Novi Sad","Belgrad","Ruse","Cernadova","Braila","Galati","Tulcea"]},
+        {"name": "Main-Donau-Kanal", "locationsInOrder":["Bamberg","Nürnberg","Kelheim"]},
+        {"name": "Nord-Ostsee-Kanal", "locationsInOrder":["Brunsbüttel","Kiel"]},
+        {"name": "Mittellandkanal", "locationsInOrder":["Rheine(Ems)","Minden","Hannover","Braunschweig","Wolfsburg","Magdeburg"]},
+    ],
 }
